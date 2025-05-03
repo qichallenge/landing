@@ -1,0 +1,83 @@
+/* Reset & Variables */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #3a0ca3;
+    --secondary: #7209b7;
+    --white: #fff;
+    --font: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: var(--font);
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.logo {
+    width: 80px;
+    margin-bottom: 1rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.hero p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.launch {
+    margin-top: 0.5rem;
+    font-weight: 600;
+    color: #f72585;
+}
+
+.social {
+    margin: auto;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.social h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.icons img {
+    width: 40px;
+    transition: transform 0.3s;
+}
+
+.icons a:hover img {
+    transform: scale(1.2);
+}
+
+footer {
+    margin-top: auto;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
