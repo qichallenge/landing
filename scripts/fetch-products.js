@@ -17,35 +17,39 @@ async function fetchProducts() {
         // Fetch the Redbubble shop page
         const { data } = await axios.get(REDBUBBLE_SHOP_URL, {
             headers: {
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
-            }
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+                'Accept-Language': 'en-US,en;q=0.5',
+                'Accept-Encoding': 'gzip, deflate, br',
+                'DNT': '1',
+                'Connection': 'keep-alive',
+                'Upgrade-Insecure-Requests': '1',
+                'Sec-Fetch-Dest': 'document',
+                'Sec-Fetch-Mode': 'navigate',
+                'Sec-Fetch-Site': 'none',
+                'Sec-Fetch-User': '?1'
+            },
+            timeout: 10000
         });
 
-        // Parse the HTML
-        const $ = cheerio.load(data);
-        
-        // Extract the JSON data from the script tag
-        const scriptContent = $('script:contains("window.__INITIAL_STATE__")').html();
-        if (!scriptContent) {
-            throw new Error('Could not find initial state in page');
+        // Extract Apollo state from the script tag
+        const apolloStateMatch = data.match(/window\.__APOLLO_STATE__\s*=\s*({[\s\S]*?});<\/script>/);
+        if (!apolloStateMatch) {
+            throw new Error('Could not find Apollo state in page');
         }
 
-        // Extract the JSON string
-        const jsonMatch = scriptContent.match(/window\.__INITIAL_STATE__\s*=\s*({.*?});/s);
-        if (!jsonMatch) {
-            throw new Error('Could not parse initial state');
-        }
+        const apolloState = JSON.parse(apolloStateMatch[1]);
 
-        const initialState = JSON.parse(jsonMatch[1]);
-        
-        // Extract products from the state
-        const products = Object.values(initialState.shop.products.entities).map(product => ({
-            id: product.id,
-            title: product.title,
-            url: `https://www.redbubble.com${product.url}`,
-            image: product.thumbnail_url || product.assets[0]?.url,
-            price: product.price?.formatted || 'N/A'
-        }));
+        // Extract products
+        const products = Object.entries(apolloState)
+            .filter(([key]) => key.startsWith("Product:"))
+            .map(([_, product]) => ({
+                id: product.id,
+                title: product.title,
+                url: `https://www.redbubble.com${product.url}`,
+                image: product.images?.large,
+                price: product.prices?.[0]?.price || 'N/A'
+            }));
 
         // Write to file
         fs.writeFileSync(OUTPUT_FILE, JSON.stringify(products, null, 2));
