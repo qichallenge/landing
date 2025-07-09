@@ -3,54 +3,182 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description"
-          content="QI Challenge 🚀 Défis intellectuels, quiz visuels et énigmes pour stimuler votre esprit !"/>
-    <title>QI Challenge</title>
+    <meta name="description" content="QI Challenge - Mini-portail avec tous nos liens importants, boutique et contact"/>
+    <title>QI Challenge - Portail</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <!-- Favicon -->
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-
 </head>
 <body>
-<header class="hero">
-    <img src="assets/qi_white_white_bg.png" alt="Logo QI Challenge" class="logo">
-<!--    <h1>QI Challenge</h1>-->
-    <p>Des défis intellectuels, quiz visuels & énigmes pour stimuler votre esprit&nbsp;🚀</p>
-    <p class="launch">Le site complet arrive bientôt !</p>
-</header>
+    <!-- Header avec logo et titre -->
+    <header class="hero">
+        <div class="hero-content">
+            <img src="assets/qi_white_white_bg.png" alt="Logo QI Challenge" class="logo">
+            <h1 class="brand-title">QI Challenge</h1>
+            <p class="tagline">Défis intellectuels, quiz visuels & énigmes pour stimuler votre esprit</p>
+        </div>
+    </header>
 
-<section class="social">
-    <h2>Retrouvez-nous sur les réseaux</h2>
-    <div class="icons">
-        <!-- Utiliser des SVG optimisés dans assets/social-icons/ -->
-        <a href="https://instagram.com/qi.challenge" target="_blank" aria-label="Instagram">
-            <img src="assets/social-icons/instagram.svg" alt="Instagram">
-        </a>
-        <a href="https://facebook.com/qi.challenge" target="_blank" aria-label="Facebook">
-            <img src="assets/social-icons/facebook.svg" alt="Facebook">
-        </a>
-        <a href="https://youtube.com/@qi.challenge" target="_blank" aria-label="YouTube">
-            <img src="assets/social-icons/youtube.svg" alt="YouTube">
-        </a>
-        <a href="https://tiktok.com/@qi.challenge" target="_blank" aria-label="TikTok">
-            <img src="assets/social-icons/tiktok.svg" alt="TikTok">
-        </a>
-        <a href="https://threads.net/@qi.challenge" target="_blank" aria-label="Threads">
-            <img src="assets/social-icons/threads.svg" alt="Threads">
-        </a>
-        <a href="https://twitter.com/qi_challenge" target="_blank" aria-label="Twitter">
-            <img src="assets/social-icons/twitter.svg" alt="Twitter">
-        </a>
-    </div>
-</section>
+    <!-- Navigation principale -->
+    <nav class="main-nav">
+        <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+            <span class="hamburger"></span>
+        </button>
+        <div class="nav-menu">
+            <a href="#social" class="nav-link">Réseaux</a>
+            <a href="#shop" class="nav-link">Boutique</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+    </nav>
 
-<footer>
-    <p>&copy; <span id="year"></span> QI Challenge. Tous droits réservés.</p>
-</footer>
+    <!-- Contenu principal -->
+    <main class="main-content">
+        
+        <!-- Section Réseaux Sociaux -->
+        <section id="social" class="content-section">
+            <div class="section-header">
+                <h2 class="section-title">Réseaux Sociaux</h2>
+                <button class="section-toggle" aria-expanded="true" aria-controls="social-content">
+                    <svg class="toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6,9 12,15 18,9"></polyline>
+                    </svg>
+                </button>
+            </div>
+            <div id="social-content" class="section-content">
+                <div class="social-grid">
+                    <a href="https://instagram.com/qi.challenge" target="_blank" class="social-link" aria-label="Instagram">
+                        <img src="assets/social-icons/instagram.svg" alt="Instagram" class="social-icon">
+                        <span class="social-label">Instagram</span>
+                    </a>
+                    <a href="https://facebook.com/qi.challenge" target="_blank" class="social-link" aria-label="Facebook">
+                        <img src="assets/social-icons/facebook.svg" alt="Facebook" class="social-icon">
+                        <span class="social-label">Facebook</span>
+                    </a>
+                    <a href="https://youtube.com/@qi.challenge" target="_blank" class="social-link" aria-label="YouTube">
+                        <img src="assets/social-icons/youtube.svg" alt="YouTube" class="social-icon">
+                        <span class="social-label">YouTube</span>
+                    </a>
+                    <a href="https://tiktok.com/@qi.challenge" target="_blank" class="social-link" aria-label="TikTok">
+                        <img src="assets/social-icons/tiktok.svg" alt="TikTok" class="social-icon">
+                        <span class="social-label">TikTok</span>
+                    </a>
+                    <a href="https://threads.net/@qi.challenge" target="_blank" class="social-link" aria-label="Threads">
+                        <img src="assets/social-icons/threads.svg" alt="Threads" class="social-icon">
+                        <span class="social-label">Threads</span>
+                    </a>
+                    <a href="https://twitter.com/qi_challenge" target="_blank" class="social-link" aria-label="Twitter">
+                        <img src="assets/social-icons/twitter.svg" alt="Twitter" class="social-icon">
+                        <span class="social-label">Twitter</span>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-<script src="js/main.js"></script>
+        <!-- Section Boutique -->
+        <section id="shop" class="content-section">
+            <div class="section-header">
+                <h2 class="section-title">Boutique</h2>
+                <button class="section-toggle" aria-expanded="false" aria-controls="shop-content">
+                    <svg class="toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6,9 12,15 18,9"></polyline>
+                    </svg>
+                </button>
+            </div>
+            <div id="shop-content" class="section-content collapsed">
+                <div class="shop-header">
+                    <a href="https://qichallenge.redbubble.com" target="_blank" class="shop-main-link">
+                        <span class="shop-icon">🛍️</span>
+                        <span>Voir toute la boutique</span>
+                        <svg class="external-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m7 17 10-10"></path>
+                            <path d="M7 7h10v10"></path>
+                        </svg>
+                    </a>
+                </div>
+                
+                <h3 class="products-title">Produits phares</h3>
+                <div class="products-grid">
+                    <article class="product-card" data-lazy="true">
+                        <a href="https://www.redbubble.com/fr/i/casquette/Ton-Mental-Ta-Force-Ton-Avenir-QI-Challenge-par-QIChallenge/171461155.NJ288" target="_blank" class="product-link">
+                            <div class="product-image-container">
+                                <img src="assets/product_1.webp" alt="Ton Mental, Ta Force, Ton Avenir – QI Challenge™ Casquette" class="product-image" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-title">Ton Mental, Ta Force, Ton Avenir – QI Challenge™</h4>
+                                <p class="product-type">Casquette</p>
+                            </div>
+                        </a>
+                    </article>
+                    
+                    <article class="product-card" data-lazy="true">
+                        <a href="https://www.redbubble.com/fr/i/mug/J-augmente-mon-QI-un-d%C3%A9fi-%C3%A0-la-fois-par-QIChallenge/171381427.9Q0AD" target="_blank" class="product-link">
+                            <div class="product-image-container">
+                                <img src="assets/product_2.webp" alt="J’augmente mon QI – un défi à la fois Mug à café" class="product-image" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-title">J’augmente mon QI – un défi à la fois Mug à café</h4>
+                                <p class="product-type">Mug classique</p>
+                            </div>
+                        </a>
+                    </article>
+                    
+                    <article class="product-card" data-lazy="true">
+                        <a href="https://www.redbubble.com/fr/i/t-shirt/R%C3%AAve-Grand-Ose-Plus-Fort-QI-Challenge-par-QIChallenge/171463162.UGYPM" target="_blank" class="product-link">
+                            <div class="product-image-container">
+                                <img src="assets/product_3.webp" alt="Rêve Grand, Ose Plus Fort – QI Challenge™ T-shirt respirant" class="product-image" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-title">Rêve Grand, Ose Plus Fort – QI Challenge™ T-shirt respirant</h4>
+                                <p class="product-type">T-shirt respirant</p>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Contact -->
+        <section id="contact" class="content-section">
+            <div class="section-header">
+                <h2 class="section-title">Contact</h2>
+                <button class="section-toggle" aria-expanded="false" aria-controls="contact-content">
+                    <svg class="toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6,9 12,15 18,9"></polyline>
+                    </svg>
+                </button>
+            </div>
+            <div id="contact-content" class="section-content collapsed">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <span class="contact-email">contact@qichallenge.com</span>
+                    </div>
+                    <a href="mailto:contact@qichallenge.com" class="contact-button">
+                        <svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        Me contacter
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; <span id="year"></span> QI Challenge. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
 </body>
 </html>
+
