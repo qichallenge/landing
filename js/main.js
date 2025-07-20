@@ -147,7 +147,7 @@ function hideLoadingScreen() {
       // Démarrer les animations d'entrée
       initializeEntryAnimations();
       
-      announceToScreenReader('QI Challenge chargé. Bienvenue dans l\'univers néon futuriste !');
+      announceToScreenReader('QI Challenge chargé. Bienvenue dans l'univers néon futuriste !');
     }, 500);
   }
   
@@ -259,6 +259,14 @@ function toggleSection(section) {
       sectionContent.classList.remove('collapsed');
       sectionContent.style.maxHeight = sectionContent.scrollHeight + 'px';
       
+      // Ajout pour corriger le problème de l'intégration Instagram
+      if (section.id === 'posts-viraux' && typeof window.instgrm !== 'undefined') {
+        setTimeout(() => {
+          window.instgrm.Embeds.process();
+          console.log('Traitement de l'intégration Instagram relancé.');
+        }, 100); // Léger délai pour s'assurer que le contenu est visible
+      }
+      
       // Réinitialiser max-height après l'animation
       setTimeout(() => {
         sectionContent.style.maxHeight = 'none';
@@ -268,6 +276,7 @@ function toggleSection(section) {
     }
   }
 }
+
 
 /**
  * Initialiser les sections collapsibles
@@ -751,7 +760,7 @@ function initializeApp() {
     console.log('✨ QI Challenge - Mode Néon Futuriste activé !');
     
   } catch (error) {
-    console.error('❌ Erreur lors de l\'initialisation:', error);
+    console.error('❌ Erreur lors de l'initialisation:', error);
     
     // Fallback en cas d'erreur
     hideLoadingScreen();
@@ -799,4 +808,3 @@ if (window.location.hostname === 'localhost' || window.location.hostname === '12
     iqCounterValue: () => iqCounterValue
   };
 }
-
