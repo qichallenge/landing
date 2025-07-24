@@ -350,6 +350,13 @@ function initializeAnimations() {
     });
 }
 
+/**
+ * Génère un nombre aléatoire entre min et max
+ */
+function randomBetween(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 // ===== EFFETS VISUELS =====
 /**
  * Ajouter des effets de particules (optionnel)
