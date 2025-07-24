@@ -7,7 +7,7 @@ const totalSlides = 3;
 let isLoading = true;
 
 // ===== INITIALISATION =====
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     initializeApp();
 });
 
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function initializeApp() {
     // Démarrer l'animation de chargement
     startLoadingAnimation();
-    
+
     // Initialiser les composants après le chargement
     setTimeout(() => {
         hideLoadingScreen();
@@ -25,10 +25,10 @@ function initializeApp() {
         initializeSmoothScrolling();
         initializeAnimations();
         initializeAccessibility();
-        
+
         // Marquer le chargement comme terminé
         isLoading = false;
-        
+
         console.log('🧠 QI Challenge - Application initialisée avec succès!');
     }, 3000);
 }
@@ -37,16 +37,16 @@ function initializeApp() {
 function startLoadingAnimation() {
     const iqNumber = document.getElementById('iq-number');
     if (!iqNumber) return;
-    
+
     let currentIQ = 0;
     const targetIQ = 200;
     const increment = 2;
     const interval = 50;
-    
+
     const iqInterval = setInterval(() => {
         currentIQ += increment;
         iqNumber.textContent = currentIQ.toString().padStart(3, '0');
-        
+
         if (currentIQ >= targetIQ) {
             clearInterval(iqInterval);
             iqNumber.textContent = '200';
@@ -57,12 +57,12 @@ function startLoadingAnimation() {
 function hideLoadingScreen() {
     const loadingScreen = document.getElementById('loading-screen');
     const mainContent = document.getElementById('main-content');
-    
+
     if (loadingScreen && mainContent) {
         loadingScreen.classList.add('hidden');
         mainContent.style.opacity = '0';
         mainContent.style.transform = 'translateY(20px)';
-        
+
         setTimeout(() => {
             mainContent.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
             mainContent.style.opacity = '1';
@@ -76,26 +76,26 @@ function initializeNavigation() {
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.getElementById('nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
-    
+
     // Menu hamburger mobile
     if (navToggle && navMenu) {
         navToggle.addEventListener('click', () => {
             const isActive = navToggle.classList.contains('active');
-            
+
             if (isActive) {
                 closeNavMenu();
             } else {
                 openNavMenu();
             }
         });
-        
+
         // Fermer le menu en cliquant sur un lien
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 closeNavMenu();
             });
         });
-        
+
         // Fermer le menu en cliquant à l'extérieur
         document.addEventListener('click', (e) => {
             if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
@@ -103,7 +103,7 @@ function initializeNavigation() {
             }
         });
     }
-    
+
     // Navigation par sections
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
@@ -114,7 +114,7 @@ function initializeNavigation() {
             }
         });
     });
-    
+
     // Mise en surbrillance de la section active
     initializeActiveNavigation();
 }
@@ -122,11 +122,11 @@ function initializeNavigation() {
 function openNavMenu() {
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.getElementById('nav-menu');
-    
+
     navToggle.classList.add('active');
     navMenu.classList.add('active');
     navToggle.setAttribute('aria-expanded', 'true');
-    
+
     // Empêcher le scroll du body
     document.body.style.overflow = 'hidden';
 }
@@ -134,11 +134,11 @@ function openNavMenu() {
 function closeNavMenu() {
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.getElementById('nav-menu');
-    
+
     navToggle.classList.remove('active');
     navMenu.classList.remove('active');
     navToggle.setAttribute('aria-expanded', 'false');
-    
+
     // Restaurer le scroll du body
     document.body.style.overflow = '';
 }
@@ -146,21 +146,21 @@ function closeNavMenu() {
 function initializeActiveNavigation() {
     const sections = document.querySelectorAll('.content-section');
     const navLinks = document.querySelectorAll('.nav-link');
-    
+
     const observerOptions = {
         root: null,
         rootMargin: '-20% 0px -80% 0px',
         threshold: 0
     };
-    
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const sectionId = entry.target.id;
-                
+
                 // Retirer la classe active de tous les liens
                 navLinks.forEach(link => link.classList.remove('active'));
-                
+
                 // Ajouter la classe active au lien correspondant
                 const activeLink = document.querySelector(`[data-section="${sectionId}"]`);
                 if (activeLink) {
@@ -169,7 +169,7 @@ function initializeActiveNavigation() {
             }
         });
     }, observerOptions);
-    
+
     sections.forEach(section => {
         observer.observe(section);
     });
@@ -186,12 +186,12 @@ function scrollToSection(sectionId) {
     if (section) {
         const navHeight = document.querySelector('.nav-container').offsetHeight;
         const targetPosition = section.offsetTop - navHeight - 20;
-        
+
         window.scrollTo({
             top: targetPosition,
             behavior: 'smooth'
         });
-        
+
         // Annoncer le changement pour les lecteurs d'écran
         announceToScreenReader(`Navigation vers la section ${sectionId}`);
     }
@@ -203,25 +203,25 @@ function initializeCarousel() {
     const prevBtn = document.getElementById('prev-btn');
     const nextBtn = document.getElementById('next-btn');
     const indicators = document.querySelectorAll('.indicator');
-    
+
     if (!carouselTrack || !prevBtn || !nextBtn) return;
-    
+
     // Boutons de navigation
     prevBtn.addEventListener('click', () => {
         navigateCarousel('prev');
     });
-    
+
     nextBtn.addEventListener('click', () => {
         navigateCarousel('next');
     });
-    
+
     // Indicateurs
     indicators.forEach((indicator, index) => {
         indicator.addEventListener('click', () => {
             goToSlide(index);
         });
     });
-    
+
     // Navigation au clavier
     document.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowLeft') {
@@ -230,7 +230,7 @@ function initializeCarousel() {
             navigateCarousel('next');
         }
     });
-    
+
     // Auto-play (optionnel)
     // startCarouselAutoplay();
 }
@@ -241,7 +241,7 @@ function navigateCarousel(direction) {
     } else {
         currentSlide = currentSlide < totalSlides - 1 ? currentSlide + 1 : 0;
     }
-    
+
     updateCarousel();
 }
 
@@ -253,17 +253,17 @@ function goToSlide(slideIndex) {
 function updateCarousel() {
     const carouselTrack = document.getElementById('carousel-track');
     const indicators = document.querySelectorAll('.indicator');
-    
+
     if (carouselTrack) {
         const translateX = -currentSlide * 100;
         carouselTrack.style.transform = `translateX(${translateX}%)`;
     }
-    
+
     // Mettre à jour les indicateurs
     indicators.forEach((indicator, index) => {
         indicator.classList.toggle('active', index === currentSlide);
     });
-    
+
     // Annoncer le changement pour les lecteurs d'écran
     announceToScreenReader(`Slide ${currentSlide + 1} sur ${totalSlides}`);
 }
@@ -279,17 +279,17 @@ function startCarouselAutoplay() {
 // ===== HALL OF FAME =====
 function initializeHallOfFame() {
     const categoryTabs = document.querySelectorAll('.category-tab');
-    
+
     categoryTabs.forEach(tab => {
         tab.addEventListener('click', (e) => {
             e.preventDefault();
             const category = tab.getAttribute('data-category');
             filterHallOfFame(category);
-            
+
             // Mettre à jour l'état actif des onglets
             categoryTabs.forEach(t => t.classList.remove('active'));
             tab.classList.add('active');
-            
+
             // Annoncer le changement pour les lecteurs d'écran
             announceToScreenReader(`Filtre Hall of Fame: ${category}`);
         });
@@ -298,10 +298,10 @@ function initializeHallOfFame() {
 
 function filterHallOfFame(category) {
     const hallEntries = document.querySelectorAll('.hall-entry');
-    
+
     hallEntries.forEach(entry => {
         const entryCategory = entry.getAttribute('data-category');
-        
+
         if (category === 'tous' || entryCategory === category) {
             entry.style.display = 'table-row';
             entry.style.opacity = '1';
@@ -312,7 +312,7 @@ function filterHallOfFame(category) {
             entry.style.transform = 'translateY(-10px)';
         }
     });
-    
+
     // Animation d'apparition pour les entrées visibles
     setTimeout(() => {
         const visibleEntries = document.querySelectorAll('.hall-entry[style*="table-row"]');
@@ -334,7 +334,7 @@ function initializeAnimations() {
         rootMargin: '0px 0px -100px 0px',
         threshold: 0.1
     };
-    
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -342,7 +342,7 @@ function initializeAnimations() {
             }
         });
     }, observerOptions);
-    
+
     // Observer les éléments à animer
     const animatedElements = document.querySelectorAll('.content-section, .product-card, .social-link');
     animatedElements.forEach(el => {
@@ -355,9 +355,9 @@ function initializeAnimations() {
  * Ajouter des effets de particules (optionnel)
  */
 function addParticleEffects() {
-  const particleContainer = document.createElement('div');
-  particleContainer.className = 'particle-container';
-  particleContainer.style.cssText = `
+    const particleContainer = document.createElement('div');
+    particleContainer.className = 'particle-container';
+    particleContainer.style.cssText = `
     position: fixed;
     top: 0;
     left: 0;
@@ -367,26 +367,26 @@ function addParticleEffects() {
     z-index: -1;
   `;
 
-  document.body.appendChild(particleContainer);
+    document.body.appendChild(particleContainer);
 
-  // Créer des particules flottantes
-  for (let i = 0; i < 20; i++) {
-    setTimeout(() => {
-      createParticle(particleContainer);
-    }, i * 200);
-  }
+    // Créer des particules flottantes
+    for (let i = 0; i < 20; i++) {
+        setTimeout(() => {
+            createParticle(particleContainer);
+        }, i * 200);
+    }
 }
 
 /**
  * Créer une particule flottante
  */
 function createParticle(container) {
-  const particle = document.createElement('div');
-  const size = randomBetween(2, 6);
-  const duration = randomBetween(10, 20);
-  const delay = randomBetween(0, 5);
+    const particle = document.createElement('div');
+    const size = randomBetween(2, 6);
+    const duration = randomBetween(10, 20);
+    const delay = randomBetween(0, 5);
 
-  particle.style.cssText = `
+    particle.style.cssText = `
     position: absolute;
     width: ${size}px;
     height: ${size}px;
@@ -398,11 +398,11 @@ function createParticle(container) {
     opacity: 0.6;
   `;
 
-  // Ajouter l'animation CSS si elle n'existe pas
-  if (!document.querySelector('#particle-styles')) {
-    const style = document.createElement('style');
-    style.id = 'particle-styles';
-    style.textContent = `
+    // Ajouter l'animation CSS si elle n'existe pas
+    if (!document.querySelector('#particle-styles')) {
+        const style = document.createElement('style');
+        style.id = 'particle-styles';
+        style.textContent = `
       @keyframes floatUp {
         0% {
           transform: translateY(0) rotate(0deg);
@@ -420,19 +420,19 @@ function createParticle(container) {
         }
       }
     `;
-    document.head.appendChild(style);
-  }
-
-  container.appendChild(particle);
-
-  // Supprimer la particule après l'animation
-  setTimeout(() => {
-    if (container.contains(particle)) {
-      container.removeChild(particle);
+        document.head.appendChild(style);
     }
-    // Créer une nouvelle particule
-    createParticle(container);
-  }, (duration + delay) * 1000);
+
+    container.appendChild(particle);
+
+    // Supprimer la particule après l'animation
+    setTimeout(() => {
+        if (container.contains(particle)) {
+            container.removeChild(particle);
+        }
+        // Créer une nouvelle particule
+        createParticle(container);
+    }, (duration + delay) * 1000);
 }
 
 // ===== FONCTIONS UTILITAIRES =====
@@ -443,11 +443,11 @@ function participateChallenge() {
         'https://facebook.com/qichallenge',
         'https://tiktok.com/@qichallenge'
     ];
-    
+
     // Ouvrir un lien aléatoire ou permettre à l'utilisateur de choisir
     const randomLink = socialLinks[Math.floor(Math.random() * socialLinks.length)];
     window.open(randomLink, '_blank');
-    
+
     // Annoncer l'action
     announceToScreenReader('Redirection vers les réseaux sociaux pour participer aux défis');
 }
@@ -456,7 +456,7 @@ function announceToScreenReader(message) {
     const announcements = document.getElementById('sr-announcements');
     if (announcements) {
         announcements.textContent = message;
-        
+
         // Effacer le message après un délai
         setTimeout(() => {
             announcements.textContent = '';
@@ -468,27 +468,27 @@ function announceToScreenReader(message) {
 function initializeAccessibility() {
     // Gestion du focus pour les éléments interactifs
     const interactiveElements = document.querySelectorAll('button, a, input, select, textarea, [tabindex]');
-    
+
     interactiveElements.forEach(element => {
         element.addEventListener('focus', (e) => {
             e.target.classList.add('focused');
         });
-        
+
         element.addEventListener('blur', (e) => {
             e.target.classList.remove('focused');
         });
     });
-    
+
     // Gestion des raccourcis clavier
     document.addEventListener('keydown', (e) => {
         // Échapper pour fermer les modales/menus
         if (e.key === 'Escape') {
             closeNavMenu();
         }
-        
+
         // Raccourcis de navigation
         if (e.altKey) {
-            switch(e.key) {
+            switch (e.key) {
                 case '1':
                     e.preventDefault();
                     scrollToSection('reseaux');
@@ -521,7 +521,7 @@ function initializeAccessibility() {
 // ===== GESTION DES ERREURS =====
 window.addEventListener('error', (e) => {
     console.error('Erreur JavaScript:', e.error);
-    
+
     // En mode développement, afficher l'erreur
     if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
         console.warn('Erreur détectée en mode développement:', e.error);
@@ -532,7 +532,7 @@ window.addEventListener('error', (e) => {
 // Lazy loading pour les images
 function initializeLazyLoading() {
     const lazyImages = document.querySelectorAll('img[loading="lazy"]');
-    
+
     if ('IntersectionObserver' in window) {
         const imageObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -544,7 +544,7 @@ function initializeLazyLoading() {
                 }
             });
         });
-        
+
         lazyImages.forEach(img => imageObserver.observe(img));
     }
 }
@@ -574,7 +574,7 @@ window.addEventListener('resize', debounce(() => {
 function trackEvent(eventName, eventData = {}) {
     // Placeholder pour l'analytics
     console.log('Event tracked:', eventName, eventData);
-    
+
     // Ici vous pourriez intégrer Google Analytics, Mixpanel, etc.
     // gtag('event', eventName, eventData);
 }
@@ -612,11 +612,10 @@ if (typeof module !== 'undefined' && module.exports) {
 }
 
 
-
 // ===== BOUTONS REJOIGNEZ-NOUS =====
 function initializeJoinButtons() {
     const joinButtons = document.querySelectorAll('.join-button');
-    
+
     joinButtons.forEach(button => {
         button.addEventListener('click', (e) => {
             e.preventDefault();
@@ -636,7 +635,7 @@ function joinPlatform(platform) {
         'twitter': 'https://twitter.com/qichallenge',
         'twitch': 'https://twitch.tv/qichallenge'
     };
-    
+
     const link = platformLinks[platform];
     if (link) {
         window.open(link, '_blank');
@@ -648,7 +647,7 @@ function joinPlatform(platform) {
 function initializeApp() {
     // Démarrer l'animation de chargement
     startLoadingAnimation();
-    
+
     // Initialiser les composants après le chargement
     setTimeout(() => {
         hideLoadingScreen();
@@ -659,10 +658,15 @@ function initializeApp() {
         initializeSmoothScrolling();
         initializeAnimations();
         initializeAccessibility();
-        
+
+        // Effets visuels optionnels
+        if (window.innerWidth > 768) {
+            addParticleEffects();
+        }
+
         // Marquer le chargement comme terminé
         isLoading = false;
-        
+
         console.log('🧠 QI Challenge - Application initialisée avec succès!');
     }, 3000);
 }
