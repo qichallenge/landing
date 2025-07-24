@@ -1,389 +1,705 @@
-# QI Challenge - Mini-portail Néon Futuriste 🧠✨
+# QI Challenge - Mini-Portail Néon Futuriste
 
-> **High-tech Intellect** - Plongez dans la Matrice de l'Intelligence
+## 🧠 Plateforme d'Éveil Intellectuel et de Développement Personnel
 
-Un mini-portail élégant et futuriste pour QI Challenge, conçu comme un Linktree avancé avec une ambiance cyberpunk et des effets néon époustouflants. Ce projet transforme une simple page de liens en une expérience immersive digne d'un QI challenge dans la Matrice.
+[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/qichallenge/mini-portal)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Responsive](https://img.shields.io/badge/responsive-yes-brightgreen.svg)](https://github.com/qichallenge/mini-portal)
 
-## 🌟 Aperçu du Projet
+---
 
-### Vision Créative
-Ce mini-portail incarne l'essence de **QI Challenge** à travers un design néon futuriste qui évoque l'intelligence artificielle, la technologie avancée et l'innovation. Chaque élément visuel a été pensé pour créer une expérience utilisateur "à couper le souffle" qui reflète la sophistication intellectuelle de la marque.
+## 📋 Table des Matières
 
-### Philosophie de Design
-- **Minimalisme Futuriste** : Épuré mais visuellement riche
-- **Ambiance Cyberpunk** : Couleurs néon sur fond sombre
-- **Intelligence Visuelle** : Animations qui évoquent l'activité cérébrale
-- **Accessibilité Premium** : Design inclusif sans compromis esthétique
+1. [Présentation](#présentation)
+2. [Fonctionnalités](#fonctionnalités)
+3. [Design & Style](#design--style)
+4. [Structure du Projet](#structure-du-projet)
+5. [Installation](#installation)
+6. [Configuration](#configuration)
+7. [Utilisation](#utilisation)
+8. [Personnalisation](#personnalisation)
+9. [Déploiement](#déploiement)
+10. [Maintenance](#maintenance)
+11. [Support](#support)
+12. [Licence](#licence)
 
-## 🎨 Style Néon Futuriste
+---
 
-### Palette de Couleurs
-Notre palette de couleurs a été soigneusement sélectionnée pour créer une ambiance "High-tech Intellect" :
+## 🎯 Présentation
 
-- **Bleu Électrique** (`#00d4ff`) - Couleur principale, évoque l'intelligence et la technologie
-- **Violet Néon** (`#8a2be2`) - Couleur secondaire, mystère et créativité
-- **Rose Fuchsia** (`#ff1493`) - Couleur d'accent, énergie et innovation
-- **Noir Brillant** (`#0a0a0a`) - Arrière-plan principal, profondeur et élégance
-- **Violet Sombre** (`#1a0033`) - Arrière-plan secondaire, ambiance spatiale
+Le **Mini-Portail QI Challenge** est une plateforme web moderne et interactive dédiée à l'éveil intellectuel et au développement personnel. Inspiré par l'esthétique cyberpunk et les interfaces futuristes, ce portail centralise tous les liens importants de la marque QI Challenge dans une expérience utilisateur immersive et engageante.
+
+### Mission
+QI Challenge est une plateforme dédiée à l'éveil intellectuel, à la curiosité et au développement personnel à travers des contenus interactifs, ludiques et éducatifs. Nous proposons chaque jour des énigmes, des quiz, des anecdotes et des défis stimulants pour entraîner l'esprit, apprendre autrement et s'amuser tout en se cultivant. **Notre mission : faire de l'intelligence un jeu accessible à tous.**
+
+### Vision Technique
+Ce mini-portail combine les meilleures pratiques du développement web moderne avec un design avant-gardiste pour créer une expérience utilisateur mémorable et fonctionnelle sur tous les appareils.
+
+---
+
+## ✨ Fonctionnalités
+
+### 🌐 Réseaux Sociaux Intégrés
+- **Centralisation complète** : Tous les réseaux sociaux QI Challenge accessibles en un clic
+- **Plateformes supportées** :
+  - Instagram (@qichallenge)
+  - Facebook (qi.challenge)
+  - YouTube (@qichallenge)
+  - TikTok (@qi.challenge)
+  - Threads (@qichallenge)
+  - Twitter (@qichallenge)
+  - Twitch (qichallenge)
+- **Icônes SVG optimisées** : Chargement rapide et qualité parfaite sur tous les écrans
+- **Effets hover interactifs** : Animations fluides au survol
+
+### 🛍️ E-commerce Léger
+- **Intégration Redbubble** : Lien direct vers la boutique officielle
+- **Aperçu produits** : Vignettes des produits phares avec images optimisées
+- **Produits mis en avant** :
+  - T-shirts QI Challenge (à partir de 19€)
+  - Stickers créatifs (à partir de 2€)
+  - Mugs design intellectuel (à partir de 12€)
+- **Navigation fluide** : Redirection directe vers les pages produits
+
+### 📖 Journal du Génie
+- **Intégration Gumroad** : Accès direct au planner quotidien
+- **Contenu premium** : 30 jours de défis intellectuels et pensées positives
+- **Format téléchargeable** : PDF optimisé pour impression et usage numérique
+- **Prix attractif** : 7,90€ pour un mois de développement personnel
+
+### 🔥 Posts Viraux
+- **Carousel interactif** : Navigation fluide entre les contenus populaires
+- **Intégrations natives** :
+  - **Instagram** : Embed direct des posts avec métriques (12.5K likes, 847 commentaires)
+  - **Facebook** : Code embed officiel intégré
+  - **TikTok** : Code embed officiel avec script asynchrone
+- **Métriques en temps réel** : Affichage des performances de chaque post
+- **Navigation intuitive** : Boutons précédent/suivant et indicateurs visuels
+
+### 🏆 Hall of Fame Dynamique
+- **Système de filtrage avancé** : 5 catégories de membres de la communauté
+  - **Tous** : Vue d'ensemble complète
+  - **🧠 Décodeurs** : Les meilleurs résolveurs d'énigmes
+  - **🎭 Les plus drôles** : Les commentaires les plus hilarants
+  - **💡 Créatifs** : Les réponses les plus originales
+  - **📣 Ambassadeurs** : Les membres les plus actifs
+- **Tableau responsive** : Adaptation parfaite sur tous les écrans
+- **Données en temps réel** : Mise à jour régulière des performances
+- **Profils détaillés** : Nom, pseudo, catégorie, exploit et date
+
+### 📧 Contact Professionnel
+- **Double canal de communication** :
+  - **contact@qichallenge.com** : Questions générales, idées, défis
+  - **partenariats@qichallenge.com** : Collaborations et partenariats
+- **Réactivité garantie** : Réponse sous 24h
+- **Support multilingue** : Français et Anglais
+- **Interface intuitive** : Boutons d'action clairs et accessibles
+
+### 🎮 Fonctionnalités Interactives
+- **Bouton "Participer aux Défis"** : Redirection intelligente vers les réseaux sociaux
+- **Animation de chargement** : Cerveau pulsant avec compteur QI animé (0 à 200)
+- **Navigation au clavier** : Support complet pour l'accessibilité
+- **Transitions fluides** : Animations CSS optimisées pour les performances
+
+---
+
+## 🎨 Design & Style
+
+### Palette Néon Futuriste
+Le design s'inspire de l'esthétique cyberpunk et des interfaces high-tech pour créer une ambiance immersive :
+
+- **Couleurs primaires** :
+  - Bleu électrique (`#00d4ff`) : Énergie et intelligence
+  - Violet néon (`#8a2be2`) : Créativité et mystère
+  - Rose fuchsia (`#ff1493`) : Passion et dynamisme
+  - Noir brillant (`#0a0a0a`) : Élégance et profondeur
 
 ### Typographie Futuriste
-- **Police Principale** : Orbitron - Pour les titres et éléments importants
-- **Police Secondaire** : Rajdhani - Pour le texte courant et la navigation
-- **Effets Spéciaux** : Ombrages brillants, effets de lueur néon
+- **Police principale** : Orbitron (Google Fonts) - Pour les titres et éléments importants
+- **Police secondaire** : Rajdhani (Google Fonts) - Pour le contenu et la lisibilité
+- **Hiérarchie claire** : 9 tailles de police définies pour une cohérence parfaite
+- **Effets de lueur** : Text-shadow et glow effects pour l'ambiance néon
 
-### Textures et Effets
-- **Vagues Lumineuses** : Animations continues qui traversent l'écran
-- **Grille Cyberpunk** : Arrière-plan avec grille animée subtile
-- **Particules Flottantes** : Éléments qui montent comme des données
-- **Effets de Lueur** : Halos néon sur tous les éléments interactifs
+### Animations et Effets
+- **Vagues lumineuses** : Arrière-plan animé avec dégradés radiaux flottants
+- **Particules flottantes** : Effet de profondeur et d'immersion
+- **Transitions CSS** : 3 vitesses définies (rapide, normale, lente)
+- **Effets hover** : Interactions subtiles et engageantes
+- **Pulsations** : Animations de respiration pour les éléments importants
 
-## 🚀 Fonctionnalités Principales
+### Responsive Design
+- **Mobile First** : Conception optimisée pour les petits écrans
+- **Breakpoints définis** :
+  - Mobile : < 768px
+  - Tablette : 768px - 1024px
+  - Desktop : > 1024px
+- **Menu hamburger** : Navigation mobile intuitive
+- **Grille flexible** : Adaptation automatique du contenu
+- **Images optimisées** : Lazy loading et formats modernes
 
-### 1. Animation de Chargement "QI en Action"
-Une séquence d'introduction spectaculaire qui simule l'activation d'un cerveau artificiel :
-- **Cerveau Pulsant** : Icône de cerveau avec animations de pulsation
-- **Compteur QI** : Animation de 0 à 200 avec effet d'easing naturel
-- **Anneaux d'Énergie** : Cercles concentriques qui pulsent
-- **Message d'Activation** : "Activation du génie en cours..." avec effet néon
+---
 
-### 2. Navigation Intelligente
-- **Menu Futuriste** : Navigation avec effets de lueur et transitions fluides
-- **Sections Collapsibles** : Ouverture/fermeture avec animations élégantes
-- **Navigation Clavier** : Support complet pour l'accessibilité
-- **Responsive Design** : Menu hamburger sur mobile avec animations
+## 📁 Structure du Projet
 
-### 3. Sections de Contenu Enrichies
-
-#### 🌐 Réseaux Sociaux
-Grille interactive des plateformes sociales avec :
-- Effets hover sophistiqués
-- Icônes avec transformations 3D
-- Liens directs vers les profils QI Challenge
-
-#### 🛍️ Boutique Redbubble
-Vitrine des produits phares avec :
-- **Cartes Agrandies** : Plus d'impact visuel dans le container
-- **Effets Hover** : Transformations et overlays au survol
-- **Intégration E-commerce** : Liens directs vers les produits
-- **Lazy Loading** : Chargement optimisé des images
-
-#### 📖 Journal Gumroad
-Section dédiée au "Planner du Génie Quotidien" :
-- **Design Spécial** : Couleurs fuchsia pour se démarquer
-- **Lien Direct** : Vers https://qichallenge.gumroad.com/l/genie1
-- **Présentation Attractive** : Mise en valeur du produit digital
-
-#### 🔥 Posts Viraux
-Carousel interactif des contenus populaires :
-- **Navigation Fluide** : Boutons précédent/suivant avec effets
-- **Indicateurs Visuels** : Points de navigation animés
-- **Auto-play** : Défilement automatique avec pause au survol
-- **Badges Viraux** : Indicateurs de popularité animés
-
-#### 🏆 Hall of Fame
-Mur des légendes de la communauté :
-- **Système de Filtrage** : Onglets par catégories (Décodeurs, Drôles, Créatifs, Ambassadeurs)
-- **Badges de Rang** : Or, Argent, Bronze avec effets visuels
-- **Tableau Interactif** : Hover effects et animations d'entrée
-- **Gamification** : Encourage la participation communautaire
-
-#### 📧 Contact Professionnel
-Interface de contact moderne :
-- **Informations Claires** : Email et temps de réponse
-- **Bouton CTA** : "Me contacter" avec effets néon
-- **Liens Sociaux Rapides** : Accès direct aux plateformes
-
-### 4. Bouton "Participer aux Défis"
-Fonctionnalité interactive qui :
-- Redirige aléatoirement vers les réseaux sociaux QI Challenge
-- Applique des effets visuels avant la redirection
-- Encourage l'engagement communautaire
-
-## 🛠️ Architecture Technique
-
-### Structure des Fichiers
 ```
 landing/
-├── index.html              # Structure HTML principale
+├── index.html                 # Page principale
+├── mentions-legales.html      # Page des mentions légales
+├── confidentialite.html       # Page de politique de confidentialité
+├── README.md                  # Documentation (ce fichier)
 ├── css/
-│   └── style.css           # Styles Néon Futuriste complets
+│   └── style.css             # Styles principaux (Néon Futuriste)
 ├── js/
-│   └── main.js             # Fonctionnalités interactives
-├── assets/
-│   ├── qi_white_white_bg.png    # Logo QI Challenge
-│   ├── gumroad_journal.png      # Image du journal
-│   └── products/                # Images des produits
-└── README.md               # Documentation (ce fichier)
+│   └── main.js               # Logique JavaScript
+└── assets/
+    ├── favicon.ico           # Icône du site
+    ├── images/
+    │   ├── product_1.webp    # T-shirt QI Challenge
+    │   ├── product_2.webp    # Stickers QI Challenge
+    │   ├── product_3.webp    # Mug QI Challenge
+    │   └── journal.webp      # Journal du Génie
+    └── social-icons/
+        ├── instagram.svg     # Icône Instagram
+        ├── facebook.svg      # Icône Facebook
+        ├── youtube.svg       # Icône YouTube
+        ├── tiktok.svg        # Icône TikTok
+        ├── threads.svg       # Icône Threads
+        ├── twitter.svg       # Icône Twitter (X)
+        └── twitch.svg        # Icône Twitch
 ```
 
-### Technologies Utilisées
-- **HTML5** : Structure sémantique et accessible
-- **CSS3** : Animations, transitions, et effets visuels avancés
-- **JavaScript ES6+** : Interactions et fonctionnalités dynamiques
-- **Responsive Design** : Mobile-first avec breakpoints optimisés
+### Organisation du Code
 
-### Optimisations Performances
-- **Will-change** : Propriétés CSS optimisées pour les animations
-- **Transform3D** : Accélération GPU pour les transitions
-- **Lazy Loading** : Images chargées à la demande
-- **Debouncing** : Optimisation des événements de scroll
-- **Minification** : Code optimisé pour la production
+#### HTML (index.html)
+- **Structure sémantique** : Utilisation appropriée des balises HTML5
+- **Accessibilité** : Attributs ARIA et navigation au clavier
+- **SEO optimisé** : Meta tags, Open Graph et Schema.org
+- **Performance** : Lazy loading des images et ressources optimisées
 
-## 🎯 Accessibilité (WCAG 2.1 AA)
+#### CSS (style.css)
+- **Variables CSS** : Système de design tokens pour la cohérence
+- **Architecture modulaire** : Sections clairement définies et commentées
+- **Flexbox et Grid** : Layouts modernes et flexibles
+- **Animations performantes** : Transform et opacity pour les transitions
 
-### Standards Respectés
-- **Navigation Clavier** : Tous les éléments accessibles via Tab
-- **ARIA Labels** : Descriptions complètes pour les lecteurs d'écran
-- **Contraste** : Ratios respectant les standards WCAG
-- **Focus Visible** : Indicateurs visuels clairs
-- **Annonces Dynamiques** : Feedback pour les changements d'état
+#### JavaScript (main.js)
+- **ES6+ moderne** : Syntaxe contemporaine et bonnes pratiques
+- **Modularité** : Fonctions spécialisées et réutilisables
+- **Gestion d'événements** : Listeners optimisés et nettoyage automatique
+- **Accessibilité** : Support clavier et annonces pour lecteurs d'écran
 
-### Fonctionnalités Inclusives
-- **Préférences Utilisateur** : Respect de `prefers-reduced-motion`
-- **Tailles de Police** : Responsive et adaptable
-- **Couleurs Alternatives** : Informations non dépendantes de la couleur seule
-- **Navigation Alternative** : Raccourcis clavier disponibles
+---
 
-## 📱 Responsive Design
-
-### Breakpoints Principaux
-- **Mobile** : < 768px - Layout vertical, menu hamburger
-- **Tablette** : 768px - 1024px - Grille adaptée
-- **Desktop** : > 1024px - Layout complet avec effets
-
-### Adaptations Mobiles
-- **Menu Hamburger** : Navigation compacte avec animations
-- **Cartes Empilées** : Layout vertical pour les produits
-- **Texte Optimisé** : Tailles adaptées pour la lisibilité
-- **Touch Friendly** : Zones de clic agrandies
-
-## 🎮 Interactions et Animations
-
-### Effets Visuels Principaux
-1. **Chargement Initial** : Séquence d'activation du génie
-2. **Hover States** : Transformations et effets de lueur
-3. **Transitions** : Animations fluides entre les états
-4. **Particules** : Éléments flottants pour l'ambiance
-5. **Pulsations** : Effets rythmés sur les éléments clés
-
-### Animations CSS Personnalisées
-- `neonGlow` : Effet de lueur pulsante
-- `brainPulse` : Animation du cerveau
-- `waveMove` : Mouvement des vagues lumineuses
-- `fadeInUp` : Entrée des éléments
-- `borderGlow` : Lueur des bordures
-
-## 🔧 Installation et Déploiement
+## 🚀 Installation
 
 ### Prérequis
-- Navigateur moderne supportant CSS Grid et Flexbox
-- JavaScript activé
-- Connexion internet pour les polices Google Fonts
+- Navigateur web moderne (Chrome 90+, Firefox 88+, Safari 14+, Edge 90+)
+- Serveur web local (optionnel pour le développement)
+- Éditeur de code (VS Code recommandé)
 
-### Installation Locale
-1. Téléchargez tous les fichiers du projet
-2. Ouvrez `index.html` dans votre navigateur
-3. Aucune compilation nécessaire - fonctionne directement
+### Installation Rapide
 
-### Déploiement GitHub Pages
-1. **Créer un Repository** :
+1. **Téléchargement**
    ```bash
-   git init
-   git add .
-   git commit -m "Initial commit - QI Challenge Néon Futuriste"
-   git branch -M main
-   git remote add origin https://github.com/VOTRE-USERNAME/qi-challenge-portal.git
-   git push -u origin main
+   # Cloner le repository ou télécharger l'archive ZIP
+   git clone https://github.com/qichallenge/mini-portal.git
+   cd mini-portal
    ```
 
-2. **Activer GitHub Pages** :
-   - Allez dans Settings > Pages
-   - Source : Deploy from a branch
-   - Branch : main / (root)
-   - Cliquez sur Save
+2. **Ouverture locale**
+   ```bash
+   # Option 1 : Serveur Python simple
+   python -m http.server 8000
+   
+   # Option 2 : Serveur Node.js
+   npx serve .
+   
+   # Option 3 : Extension VS Code Live Server
+   # Clic droit sur index.html > "Open with Live Server"
+   ```
 
-3. **Accéder au Site** :
-   - URL : `https://VOTRE-USERNAME.github.io/qi-challenge-portal/`
-   - Le déploiement prend quelques minutes
+3. **Accès**
+   Ouvrir `http://localhost:8000` dans votre navigateur
 
-### Configuration Personnalisée
+### Vérification de l'Installation
 
-#### Modifier les Liens Sociaux
-Dans `index.html`, section Réseaux Sociaux :
-```html
-<a href="VOTRE-LIEN-INSTAGRAM" class="social-link">
-  <!-- Contenu du lien -->
-</a>
-```
+Après l'installation, vérifiez que tous les éléments fonctionnent :
 
-#### Changer les Produits
-1. Remplacez les images dans `assets/products/`
-2. Modifiez les liens et descriptions dans `index.html`
-3. Ajustez les styles si nécessaire dans `style.css`
+- ✅ Animation de chargement (cerveau + compteur QI)
+- ✅ Menu de navigation fixe
+- ✅ Arrière-plan animé sans carreaux visibles
+- ✅ Toutes les icônes SVG des réseaux sociaux
+- ✅ Filtres du Hall of Fame
+- ✅ Boutons de contact fonctionnels
+- ✅ Responsive design sur mobile
 
-#### Personnaliser les Couleurs
-Dans `style.css`, variables CSS :
+---
+
+## ⚙️ Configuration
+
+### Variables CSS Personnalisables
+
+Le fichier `css/style.css` contient des variables CSS facilement modifiables :
+
 ```css
 :root {
+  /* Couleurs Néon Futuriste */
   --color-electric-blue: #00d4ff;
   --color-neon-violet: #8a2be2;
   --color-fuchsia-pink: #ff1493;
-  /* Modifiez selon vos préférences */
+  --color-brilliant-black: #0a0a0a;
+  
+  /* Typographie */
+  --font-primary: 'Orbitron', 'Courier New', monospace;
+  --font-secondary: 'Rajdhani', 'Arial', sans-serif;
+  
+  /* Espacements */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  
+  /* Transitions */
+  --transition-fast: 0.15s ease-in-out;
+  --transition-normal: 0.3s ease-in-out;
+  --transition-slow: 0.5s ease-in-out;
 }
 ```
 
-## 🎨 Guide de Personnalisation
+### Configuration JavaScript
 
-### Ajouter de Nouveaux Produits
-1. **Préparer l'Image** : Format carré, 400x400px minimum
-2. **Ajouter dans HTML** :
-   ```html
-   <div class="product-card">
-     <a href="LIEN-PRODUIT" class="product-link">
-       <div class="product-image-container">
-         <img src="assets/products/nouveau-produit.jpg" 
-              alt="Description du produit" 
-              class="product-image" loading="lazy">
-         <div class="product-overlay">
-           <span class="product-cta">Voir le produit</span>
-         </div>
-       </div>
-       <div class="product-info">
-         <h4 class="product-title">Nom du Produit</h4>
-         <p class="product-type">Type de produit</p>
-         <span class="product-price">Prix</span>
-       </div>
-     </a>
-   </div>
-   ```
+Le fichier `js/main.js` permet de personnaliser :
 
-### Modifier le Hall of Fame
-1. **Ajouter des Entrées** dans `index.html` :
-   ```html
-   <tr class="hall-entry decodeurs">
-     <td>
-       <div class="rank-badge gold">
-         <span class="rank-crown">👑</span>
-         <span class="rank-number">1</span>
-       </div>
-     </td>
-     <td>
-       <div class="user-info">
-         <span class="user-avatar">🧠</span>
-         <span class="user-name">@nouveau.genie</span>
-       </div>
-     </td>
-     <td>
-       <span class="type-badge decodeur">🧠 Décodeur</span>
-     </td>
-     <td>Résolution d'énigme impossible</td>
-     <td>25 juillet 2025</td>
-   </tr>
-   ```
+```javascript
+// Animation de chargement
+const targetIQ = 200;        // Score QI final
+const increment = 2;         // Vitesse d'incrémentation
+const interval = 50;         // Intervalle en millisecondes
 
-### Personnaliser les Posts Viraux
-1. **Modifier le Contenu** dans `index.html`
-2. **Ajuster les Statistiques** (likes, partages, commentaires)
-3. **Changer les Plateformes** si nécessaire
+// Carousel
+const totalSlides = 3;       // Nombre de slides
+const autoplayDelay = 5000;  // Délai auto-play en ms
 
-## 🔍 SEO et Métadonnées
-
-### Balises Meta Incluses
-```html
-<meta name="description" content="QI Challenge - Mini-portail néon futuriste. Défis, communauté et évolution intellectuelle dans un univers cyberpunk.">
-<meta name="keywords" content="QI Challenge, intelligence, défis, néon, futuriste, communauté">
-<meta property="og:title" content="QI Challenge - High-tech Intellect">
-<meta property="og:description" content="Plongez dans la Matrice de l'Intelligence">
-<meta property="og:image" content="assets/qi_white_white_bg.png">
+// Hall of Fame
+const animationDelay = 100;  // Délai entre les animations d'entrées
 ```
 
-### Optimisations SEO
-- **Titre Descriptif** : "QI Challenge - Mini-portail Néon Futuriste"
-- **Structure Sémantique** : Balises H1, H2, H3 appropriées
-- **Alt Text** : Descriptions d'images complètes
-- **Schema.org** : Balisage structuré pour les moteurs de recherche
+### Personnalisation des Contenus
 
-## 🧪 Tests et Validation
+#### Réseaux Sociaux
+Modifier les liens dans `index.html` :
+```html
+<a href="https://instagram.com/VOTRE_COMPTE" target="_blank">
+```
 
-### Tests Effectués
-- ✅ **Fonctionnalité** : Toutes les interactions testées
-- ✅ **Responsive** : Mobile, tablette, desktop
-- ✅ **Accessibilité** : Navigation clavier, lecteurs d'écran
-- ✅ **Performance** : Temps de chargement optimisés
-- ✅ **Compatibilité** : Chrome, Firefox, Safari, Edge
+#### Produits Boutique
+Remplacer les images dans `assets/images/` et mettre à jour les liens :
+```html
+<a href="https://VOTRE_BOUTIQUE.redbubble.com/PRODUIT">
+```
 
-### Outils de Test Recommandés
-- **Lighthouse** : Performance et accessibilité
-- **Wave** : Validation d'accessibilité
-- **BrowserStack** : Tests multi-navigateurs
-- **PageSpeed Insights** : Optimisation des performances
+#### Hall of Fame
+Ajouter de nouvelles entrées dans le tableau HTML :
+```html
+<tr class="hall-entry" data-category="decodeur">
+  <td class="rank-cell">
+    <div class="rank-badge">6</div>
+  </td>
+  <!-- ... autres cellules ... -->
+</tr>
+```
 
-## 🐛 Dépannage
+---
 
-### Problèmes Courants
+## 💻 Utilisation
 
-#### Les Animations ne Fonctionnent Pas
-- Vérifiez que JavaScript est activé
-- Contrôlez la console pour les erreurs
-- Assurez-vous que tous les fichiers sont chargés
+### Navigation Principale
 
-#### Problèmes d'Affichage Mobile
-- Vérifiez la balise viewport dans `<head>`
-- Testez avec les outils de développement
-- Contrôlez les media queries CSS
+Le menu de navigation fixe permet d'accéder rapidement à toutes les sections :
 
-#### Images qui ne se Chargent Pas
-- Vérifiez les chemins des fichiers
-- Assurez-vous que les images existent
-- Contrôlez les permissions de fichiers
+1. **🌐 Réseaux** : Grille des réseaux sociaux avec icônes interactives
+2. **🛍️ Boutique** : Produits phares avec liens directs Redbubble
+3. **📖 Journal** : Planner du Génie sur Gumroad
+4. **🔥 Posts Viraux** : Carousel des contenus populaires
+5. **🏆 Hall of Fame** : Tableau filtrable des membres de la communauté
+6. **📧 Contact** : Formulaires de contact et informations
 
-### Support Technique
-Pour toute question technique :
-1. Vérifiez cette documentation
-2. Consultez les commentaires dans le code
-3. Testez avec les outils de développement du navigateur
+### Fonctionnalités Interactives
 
-## 🚀 Évolutions Futures
+#### Bouton "Participer aux Défis"
+- **Fonction** : Redirection aléatoire vers les réseaux sociaux
+- **Réseaux ciblés** : Instagram, Facebook, TikTok
+- **Accessibilité** : Annonce vocale pour les lecteurs d'écran
 
-### Fonctionnalités Prévues
-- **Mode Sombre/Clair** : Basculement de thème
-- **Animations Avancées** : Effets 3D avec WebGL
-- **Intégration API** : Données dynamiques des réseaux sociaux
-- **PWA** : Application web progressive
-- **Multilingue** : Support français/anglais
+#### Filtres Hall of Fame
+- **Activation** : Clic sur les boutons de catégorie
+- **Animation** : Transition fluide avec délai progressif
+- **Persistance** : État actif maintenu visuellement
 
-### Améliorations Possibles
-- **Micro-interactions** : Feedback tactile sur mobile
-- **Personnalisation** : Thèmes utilisateur
-- **Analytics** : Suivi des interactions
-- **A/B Testing** : Optimisation continue
+#### Carousel Posts Viraux
+- **Navigation** : Boutons précédent/suivant ou indicateurs
+- **Clavier** : Flèches gauche/droite pour la navigation
+- **Auto-play** : Défilement automatique (désactivable)
 
-## 📄 Licence et Crédits
+### Responsive Behavior
 
-### Licence
-Ce projet est créé spécifiquement pour **QI Challenge**. Tous droits réservés.
+#### Mobile (< 768px)
+- Menu hamburger avec animation
+- Grille des réseaux sociaux en 2 colonnes
+- Produits boutique empilés verticalement
+- Tableau Hall of Fame avec scroll horizontal
+
+#### Tablette (768px - 1024px)
+- Menu complet visible
+- Grille des réseaux sociaux en 3 colonnes
+- Produits boutique en 2 colonnes
+- Tableau Hall of Fame adaptatif
+
+#### Desktop (> 1024px)
+- Toutes les fonctionnalités visibles
+- Grille des réseaux sociaux en 3 colonnes
+- Produits boutique en 3 colonnes
+- Tableau Hall of Fame complet
+
+---
+
+## 🎨 Personnalisation
+
+### Modification des Couleurs
+
+Pour changer la palette de couleurs, modifiez les variables CSS dans `:root` :
+
+```css
+:root {
+  /* Nouvelle palette - Exemple : Vert Matrix */
+  --color-electric-blue: #00ff41;    /* Vert néon */
+  --color-neon-violet: #008f11;      /* Vert foncé */
+  --color-fuchsia-pink: #00ff88;     /* Vert clair */
+  --color-brilliant-black: #001100;  /* Noir verdâtre */
+}
+```
+
+### Ajout de Nouveaux Réseaux Sociaux
+
+1. **Créer l'icône SVG** dans `assets/social-icons/`
+2. **Ajouter le lien HTML** :
+```html
+<a href="https://NOUVEAU_RESEAU.com/qichallenge" target="_blank" class="social-link nouveau-reseau">
+  <div class="social-icon">
+    <img src="assets/social-icons/nouveau-reseau.svg" alt="Nouveau Réseau" loading="lazy">
+  </div>
+  <span class="social-label">Nouveau Réseau</span>
+  <div class="neon-border"></div>
+</a>
+```
+3. **Ajouter les styles CSS** spécifiques si nécessaire
+
+### Modification du Contenu Hall of Fame
+
+Pour ajouter de nouveaux membres :
+
+```html
+<tr class="hall-entry" data-category="CATEGORIE">
+  <td class="rank-cell">
+    <div class="rank-badge">RANG</div>
+  </td>
+  <td class="genius-cell">
+    <div class="genius-avatar">
+      <img src="AVATAR_URL" alt="Avatar" loading="lazy">
+    </div>
+    <div class="genius-info">
+      <h4 class="genius-name">NOM COMPLET</h4>
+      <p class="genius-handle">(@pseudo)</p>
+    </div>
+  </td>
+  <td class="category-cell">
+    <span class="category-badge CATEGORIE">
+      <span class="category-icon">EMOJI</span>
+      <span class="category-text">TEXTE</span>
+    </span>
+  </td>
+  <td class="exploit-cell">DESCRIPTION_EXPLOIT</td>
+  <td class="date-cell">DATE</td>
+</tr>
+```
+
+### Personnalisation des Animations
+
+Modifier les durées et effets dans le CSS :
+
+```css
+/* Vagues d'arrière-plan */
+.wave-layer {
+  animation-duration: 25s;  /* Durée personnalisée */
+}
+
+/* Animation de chargement */
+.brain-icon {
+  animation: pulse 2s infinite;  /* Fréquence du pulse */
+}
+
+/* Transitions des boutons */
+.social-link {
+  transition: all 0.3s ease;  /* Vitesse de transition */
+}
+```
+
+---
+
+## 🚀 Déploiement
+
+### GitHub Pages (Recommandé)
+
+1. **Préparer le repository**
+   ```bash
+   git add .
+   git commit -m "Déploiement mini-portail QI Challenge"
+   git push origin main
+   ```
+
+2. **Activer GitHub Pages**
+   - Aller dans Settings > Pages
+   - Source : Deploy from a branch
+   - Branch : main / (root)
+   - Cliquer sur "Save"
+
+3. **Accéder au site**
+   - URL : `https://VOTRE_USERNAME.github.io/REPO_NAME/`
+   - Délai : 5-10 minutes pour la première activation
+
+### Netlify (Alternative)
+
+1. **Connexion GitHub**
+   - Se connecter sur netlify.com
+   - "New site from Git" > GitHub
+   - Sélectionner le repository
+
+2. **Configuration build**
+   - Build command : (laisser vide)
+   - Publish directory : (laisser vide ou "./")
+   - Cliquer sur "Deploy site"
+
+3. **Domaine personnalisé** (optionnel)
+   - Site settings > Domain management
+   - Add custom domain : `qichallenge.com`
+
+### Hébergement Traditionnel
+
+Pour un hébergement classique (OVH, 1&1, etc.) :
+
+1. **Préparer les fichiers**
+   ```bash
+   # Créer une archive
+   zip -r qichallenge-portal.zip landing/
+   ```
+
+2. **Upload FTP**
+   - Se connecter via FTP au serveur
+   - Uploader tous les fichiers dans le dossier public_html/
+   - Vérifier les permissions (644 pour les fichiers, 755 pour les dossiers)
+
+3. **Configuration serveur**
+   - Vérifier que le serveur supporte HTML5/CSS3/ES6
+   - Configurer les headers MIME si nécessaire
+   - Activer la compression GZIP pour les performances
+
+### Optimisations de Production
+
+Avant le déploiement, optimiser les performances :
+
+1. **Minification CSS/JS**
+   ```bash
+   # Utiliser des outils comme UglifyJS ou Terser
+   npx terser js/main.js -o js/main.min.js
+   ```
+
+2. **Optimisation des images**
+   ```bash
+   # Convertir en WebP pour de meilleures performances
+   cwebp assets/images/product_1.jpg -o assets/images/product_1.webp
+   ```
+
+3. **Configuration des headers**
+   ```apache
+   # .htaccess pour Apache
+   <IfModule mod_expires.c>
+     ExpiresActive on
+     ExpiresByType text/css "access plus 1 year"
+     ExpiresByType application/javascript "access plus 1 year"
+     ExpiresByType image/png "access plus 1 year"
+   </IfModule>
+   ```
+
+---
+
+## 🔧 Maintenance
+
+### Mises à Jour Régulières
+
+#### Contenu Hall of Fame
+- **Fréquence** : Hebdomadaire
+- **Processus** :
+  1. Analyser les commentaires sur les réseaux sociaux
+  2. Identifier les contributions remarquables
+  3. Mettre à jour le tableau HTML
+  4. Tester les filtres
+  5. Déployer les modifications
+
+#### Métriques Posts Viraux
+- **Fréquence** : Bi-hebdomadaire
+- **Processus** :
+  1. Récupérer les nouvelles métriques (likes, commentaires, vues)
+  2. Mettre à jour les chiffres dans le HTML
+  3. Vérifier les embeds (Instagram, Facebook, TikTok)
+  4. Tester le carousel
+
+#### Produits Boutique
+- **Fréquence** : Mensuelle
+- **Processus** :
+  1. Vérifier les liens Redbubble
+  2. Mettre à jour les prix si nécessaire
+  3. Ajouter de nouveaux produits
+  4. Optimiser les images produits
+
+### Monitoring et Analytics
+
+#### Performance Web
+- **Outils recommandés** :
+  - Google PageSpeed Insights
+  - GTmetrix
+  - WebPageTest
+- **Métriques clés** :
+  - First Contentful Paint < 2s
+  - Largest Contentful Paint < 2.5s
+  - Cumulative Layout Shift < 0.1
+
+#### Accessibilité
+- **Outils de test** :
+  - WAVE Web Accessibility Evaluator
+  - axe DevTools
+  - Lighthouse Accessibility Audit
+- **Standards** : WCAG 2.1 niveau AA
+
+#### Compatibilité Navigateurs
+- **Tests réguliers** sur :
+  - Chrome (dernières 3 versions)
+  - Firefox (dernières 3 versions)
+  - Safari (dernières 2 versions)
+  - Edge (dernières 2 versions)
+  - Mobile : iOS Safari, Chrome Mobile
+
+### Sauvegarde et Sécurité
+
+#### Sauvegarde
+```bash
+# Script de sauvegarde automatique
+#!/bin/bash
+DATE=$(date +%Y%m%d_%H%M%S)
+tar -czf "backup_qichallenge_$DATE.tar.gz" landing/
+```
+
+#### Sécurité
+- **Headers de sécurité** dans .htaccess :
+```apache
+Header always set X-Content-Type-Options nosniff
+Header always set X-Frame-Options DENY
+Header always set X-XSS-Protection "1; mode=block"
+```
+
+- **Validation régulière** :
+  - Liens externes (réseaux sociaux, boutique)
+  - Certificats SSL
+  - Sécurité des formulaires de contact
+
+---
+
+## 📞 Support
+
+### Contact Technique
+
+Pour toute question technique ou demande de support :
+
+- **Email technique** : dev@qichallenge.com
+- **Documentation** : Ce README.md
+- **Issues GitHub** : [github.com/qichallenge/mini-portal/issues](https://github.com/qichallenge/mini-portal/issues)
+
+### FAQ Technique
+
+#### Q: Le menu hamburger ne fonctionne pas sur mobile
+**R:** Vérifiez que le JavaScript est activé et que le fichier `main.js` est bien chargé. Inspectez la console pour d'éventuelles erreurs.
+
+#### Q: Les icônes SVG ne s'affichent pas
+**R:** Vérifiez les chemins vers les fichiers SVG dans `assets/social-icons/`. Assurez-vous que les fichiers existent et sont accessibles.
+
+#### Q: L'animation de chargement reste bloquée
+**R:** Vérifiez la console JavaScript. L'animation se termine automatiquement après 3 secondes. Si elle reste bloquée, il peut y avoir une erreur dans `main.js`.
+
+#### Q: Les filtres Hall of Fame ne fonctionnent pas
+**R:** Vérifiez que les attributs `data-category` sont correctement définis sur les éléments `<tr class="hall-entry">`.
+
+#### Q: Le site ne s'affiche pas correctement sur Internet Explorer
+**R:** Ce site utilise des technologies modernes (CSS Grid, Flexbox, ES6+) non supportées par Internet Explorer. Utilisez un navigateur moderne.
+
+### Ressources Utiles
+
+- **Google Fonts** : [fonts.google.com](https://fonts.google.com) (Orbitron, Rajdhani)
+- **SVG Icons** : [heroicons.com](https://heroicons.com), [feathericons.com](https://feathericons.com)
+- **CSS Grid Guide** : [css-tricks.com/snippets/css/complete-guide-grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
+- **Flexbox Guide** : [css-tricks.com/snippets/css/a-guide-to-flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- **Accessibility Guidelines** : [webaim.org/standards/wcag](https://webaim.org/standards/wcag/)
+
+---
+
+## 📄 Licence
+
+### MIT License
+
+Copyright (c) 2024 QI Challenge
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ### Crédits
-- **Design et Développement** : Manus AI
-- **Concept Original** : QI Challenge
-- **Polices** : Google Fonts (Orbitron, Rajdhani)
-- **Icônes** : Émojis Unicode et symboles personnalisés
 
-### Remerciements
-Merci à la communauté QI Challenge pour l'inspiration et les retours qui ont permis de créer cette expérience unique.
-
----
-
-## 🎯 Conclusion
-
-Ce mini-portail QI Challenge représente l'évolution d'une simple page de liens vers une expérience immersive complète. Le style Néon Futuriste transforme chaque interaction en un moment d'émerveillement technologique, reflétant parfaitement l'essence innovante de la marque QI Challenge.
-
-L'ambiance "High-tech Intellect" créée par les effets visuels, les animations fluides et la palette de couleurs cyberpunk offre aux visiteurs une expérience mémorable qui les encourage à explorer davantage l'univers QI Challenge.
-
-**Prêt à plonger dans la Matrice de l'Intelligence ?** 🧠✨
+- **Développement** : Manus AI
+- **Design** : Inspiré par l'esthétique cyberpunk et les interfaces futuristes
+- **Fonts** : Google Fonts (Orbitron, Rajdhani)
+- **Icons** : SVG personnalisés optimisés
+- **Images** : Fournies par QI Challenge
 
 ---
 
-*Dernière mise à jour : 19 juillet 2025*
-*Version : 2.0 - Néon Futuriste*
+## 🚀 Changelog
+
+### Version 2.0.0 (Actuelle)
+- ✨ **Nouveau** : Design Néon Futuriste complet
+- ✨ **Nouveau** : Animation de chargement avec cerveau pulsant
+- ✨ **Nouveau** : Hall of Fame avec système de filtrage
+- ✨ **Nouveau** : Carousel Posts Viraux interactif
+- ✨ **Nouveau** : Intégration TikTok, Facebook embeds
+- ✨ **Nouveau** : Pages légales (Mentions légales, Confidentialité)
+- ✨ **Nouveau** : Double contact (général + partenariats)
+- 🔧 **Amélioré** : Menu fixe et responsive
+- 🔧 **Amélioré** : Arrière-plan sans carreaux, dégradé fluide
+- 🔧 **Amélioré** : Toutes les icônes converties en SVG
+- 🔧 **Amélioré** : Accessibilité WCAG 2.1 AA
+- 🐛 **Corrigé** : Boutons "Rejoignez-nous" maintenant cliquables
+- 🐛 **Corrigé** : Icône TikTok s'affiche correctement
+- 🐛 **Corrigé** : Filtres Hall of Fame fonctionnels
+
+### Version 1.0.0
+- 🎉 **Initial** : Première version du mini-portail
+- ✨ Réseaux sociaux centralisés
+- ✨ Boutique Redbubble intégrée
+- ✨ Design responsive de base
+- ✨ Contact simple
+
+---
+
+**🧠 Fait avec intelligence et passion par l'équipe QI Challenge**
+
+*Dernière mise à jour : 24 juillet 2025*
 

@@ -212,6 +212,13 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
+  background: linear-gradient(135deg, 
+    var(--color-brilliant-black) 0%, 
+    var(--color-dark-space) 25%,
+    #2d1b69 50%,
+    var(--color-dark-space) 75%,
+    var(--color-brilliant-black) 100%
+  );
   overflow: hidden;
 }
 
@@ -219,26 +226,35 @@ body {
   position: absolute;
   width: 200%;
   height: 200%;
-  background: linear-gradient(45deg, transparent, var(--color-electric-blue), transparent);
-  opacity: 0.1;
-  animation: wave 20s infinite linear;
+  background: radial-gradient(ellipse at center, 
+    rgba(0, 212, 255, 0.08) 0%, 
+    rgba(138, 43, 226, 0.06) 25%,
+    rgba(255, 20, 147, 0.04) 50%,
+    transparent 70%
+  );
+  animation: wave-float 20s ease-in-out infinite;
 }
 
 .wave-1 {
+  top: -50%;
+  left: -50%;
   animation-duration: 25s;
   animation-delay: 0s;
 }
 
 .wave-2 {
+  top: -30%;
+  right: -50%;
   animation-duration: 30s;
-  animation-delay: -5s;
-  background: linear-gradient(45deg, transparent, var(--color-fuchsia-pink), transparent);
+  animation-delay: -8s;
+  animation-direction: reverse;
 }
 
 .wave-3 {
+  bottom: -50%;
+  left: -30%;
   animation-duration: 35s;
-  animation-delay: -10s;
-  background: linear-gradient(45deg, transparent, var(--color-neon-violet), transparent);
+  animation-delay: -15s;
 }
 
 .grid-overlay {
@@ -247,11 +263,27 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: 
-    linear-gradient(rgba(0, 212, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 212, 255, 0.1) 1px, transparent 1px);
-  background-size: 50px 50px;
-  animation: gridMove 40s infinite linear;
+  background: radial-gradient(circle at 50% 50%, 
+    rgba(0, 212, 255, 0.02) 0%, 
+    transparent 50%
+  );
+  opacity: 0.3;
+}
+
+/* Animation des vagues flottantes */
+@keyframes wave-float {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translate(-20px, -30px) rotate(1deg) scale(1.05);
+  }
+  50% {
+    transform: translate(20px, -20px) rotate(-1deg) scale(0.95);
+  }
+  75% {
+    transform: translate(-10px, 20px) rotate(0.5deg) scale(1.02);
+  }
 }
 
 /* ===== NAVIGATION ===== */
@@ -265,6 +297,7 @@ body {
   border-bottom: 1px solid var(--color-border);
   z-index: var(--z-nav);
   transition: all var(--transition-normal);
+  box-shadow: 0 2px 20px rgba(0, 212, 255, 0.2);
 }
 
 .nav-content {

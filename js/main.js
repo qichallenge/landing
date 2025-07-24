@@ -279,16 +279,19 @@ function startCarouselAutoplay() {
 // ===== HALL OF FAME =====
 function initializeHallOfFame() {
     const categoryTabs = document.querySelectorAll('.category-tab');
-    const hallEntries = document.querySelectorAll('.hall-entry');
     
     categoryTabs.forEach(tab => {
-        tab.addEventListener('click', () => {
+        tab.addEventListener('click', (e) => {
+            e.preventDefault();
             const category = tab.getAttribute('data-category');
             filterHallOfFame(category);
             
             // Mettre à jour l'état actif des onglets
             categoryTabs.forEach(t => t.classList.remove('active'));
             tab.classList.add('active');
+            
+            // Annoncer le changement pour les lecteurs d'écran
+            announceToScreenReader(`Filtre Hall of Fame: ${category}`);
         });
     });
 }
@@ -297,17 +300,30 @@ function filterHallOfFame(category) {
     const hallEntries = document.querySelectorAll('.hall-entry');
     
     hallEntries.forEach(entry => {
-        if (category === 'all' || entry.classList.contains(category)) {
-            entry.style.display = '';
-            entry.style.animation = 'fadeInUp 0.5s ease-out';
+        const entryCategory = entry.getAttribute('data-category');
+        
+        if (category === 'tous' || entryCategory === category) {
+            entry.style.display = 'table-row';
+            entry.style.opacity = '1';
+            entry.style.transform = 'translateY(0)';
         } else {
             entry.style.display = 'none';
+            entry.style.opacity = '0';
+            entry.style.transform = 'translateY(-10px)';
         }
     });
     
-    // Annoncer le changement pour les lecteurs d'écran
-    const visibleEntries = document.querySelectorAll('.hall-entry:not([style*="display: none"])').length;
-    announceToScreenReader(`Filtrage par ${category}. ${visibleEntries} entrées affichées.`);
+    // Animation d'apparition pour les entrées visibles
+    setTimeout(() => {
+        const visibleEntries = document.querySelectorAll('.hall-entry[style*="table-row"]');
+        visibleEntries.forEach((entry, index) => {
+            setTimeout(() => {
+                entry.style.transition = 'all 0.3s ease';
+                entry.style.opacity = '1';
+                entry.style.transform = 'translateY(0)';
+            }, index * 100);
+        });
+    }, 50);
 }
 
 // ===== ANIMATIONS =====
@@ -508,5 +524,61 @@ if (typeof module !== 'undefined' && module.exports) {
         goToSlide,
         filterHallOfFame
     };
+}
+
+
+
+// ===== BOUTONS REJOIGNEZ-NOUS =====
+function initializeJoinButtons() {
+    const joinButtons = document.querySelectorAll('.join-button');
+    
+    joinButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            const platform = button.getAttribute('data-platform');
+            joinPlatform(platform);
+        });
+    });
+}
+
+function joinPlatform(platform) {
+    const platformLinks = {
+        'instagram': 'https://instagram.com/qichallenge',
+        'facebook': 'https://facebook.com/qichallenge',
+        'youtube': 'https://youtube.com/@qichallenge',
+        'tiktok': 'https://tiktok.com/@qichallenge',
+        'threads': 'https://threads.net/@qichallenge',
+        'twitter': 'https://twitter.com/qichallenge',
+        'twitch': 'https://twitch.tv/qichallenge'
+    };
+    
+    const link = platformLinks[platform];
+    if (link) {
+        window.open(link, '_blank');
+        announceToScreenReader(`Ouverture de ${platform} dans un nouvel onglet`);
+    }
+}
+
+// Ajouter l'initialisation des boutons dans la fonction principale
+function initializeApp() {
+    // Démarrer l'animation de chargement
+    startLoadingAnimation();
+    
+    // Initialiser les composants après le chargement
+    setTimeout(() => {
+        hideLoadingScreen();
+        initializeNavigation();
+        initializeCarousel();
+        initializeHallOfFame();
+        initializeJoinButtons(); // Nouvelle fonction
+        initializeSmoothScrolling();
+        initializeAnimations();
+        initializeAccessibility();
+        
+        // Marquer le chargement comme terminé
+        isLoading = false;
+        
+        console.log('🧠 QI Challenge - Application initialisée avec succès!');
+    }, 3000);
 }
 
