@@ -350,6 +350,91 @@ function initializeAnimations() {
     });
 }
 
+// ===== EFFETS VISUELS =====
+/**
+ * Ajouter des effets de particules (optionnel)
+ */
+function addParticleEffects() {
+  const particleContainer = document.createElement('div');
+  particleContainer.className = 'particle-container';
+  particleContainer.style.cssText = `
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+  `;
+
+  document.body.appendChild(particleContainer);
+
+  // Créer des particules flottantes
+  for (let i = 0; i < 20; i++) {
+    setTimeout(() => {
+      createParticle(particleContainer);
+    }, i * 200);
+  }
+}
+
+/**
+ * Créer une particule flottante
+ */
+function createParticle(container) {
+  const particle = document.createElement('div');
+  const size = randomBetween(2, 6);
+  const duration = randomBetween(10, 20);
+  const delay = randomBetween(0, 5);
+
+  particle.style.cssText = `
+    position: absolute;
+    width: ${size}px;
+    height: ${size}px;
+    background: radial-gradient(circle, #00d4ff, transparent);
+    border-radius: 50%;
+    left: ${randomBetween(0, 100)}%;
+    top: 100%;
+    animation: floatUp ${duration}s linear ${delay}s infinite;
+    opacity: 0.6;
+  `;
+
+  // Ajouter l'animation CSS si elle n'existe pas
+  if (!document.querySelector('#particle-styles')) {
+    const style = document.createElement('style');
+    style.id = 'particle-styles';
+    style.textContent = `
+      @keyframes floatUp {
+        0% {
+          transform: translateY(0) rotate(0deg);
+          opacity: 0;
+        }
+        10% {
+          opacity: 0.6;
+        }
+        90% {
+          opacity: 0.6;
+        }
+        100% {
+          transform: translateY(-100vh) rotate(360deg);
+          opacity: 0;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
+  container.appendChild(particle);
+
+  // Supprimer la particule après l'animation
+  setTimeout(() => {
+    if (container.contains(particle)) {
+      container.removeChild(particle);
+    }
+    // Créer une nouvelle particule
+    createParticle(container);
+  }, (duration + delay) * 1000);
+}
+
 // ===== FONCTIONS UTILITAIRES =====
 function participateChallenge() {
     // Redirection vers les réseaux sociaux pour participer aux défis
