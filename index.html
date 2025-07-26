@@ -39,6 +39,13 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Facebook SDK -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v18.0" nonce="GfA4A4gA"></script>
+
+    <!-- Particle Container -->
+    <div id="particle-container"></div>
+
     <!-- Loading Animation -->
     <div id="loading-screen" class="loading-screen">
         <div class="loading-content">
@@ -68,9 +75,6 @@
             <div class="grid-overlay"></div>
         </div>
 
-        <!-- Particle Container -->
-        <div class="particle-container" id="particle-container"></div>
-
         <!-- Navigation -->
         <nav class="nav-container" role="navigation" aria-label="Navigation principale">
             <div class="nav-content">
@@ -78,7 +82,7 @@
                     <img src="assets/qi_white_white_bg.png" alt="Logo QI Challenge" class="logo-image">
                     <span class="logo-text">QI Challenge</span>
                 </div>
-                
+
                 <!-- Desktop Navigation -->
                 <div class="nav-menu" id="nav-menu">
                     <a href="#reseaux" class="nav-link" data-section="reseaux">
@@ -106,7 +110,7 @@
                         <span>Contact</span>
                     </a>
                 </div>
-                
+
                 <!-- Mobile Menu Toggle -->
                 <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Ouvrir le menu de navigation">
                     <span class="hamburger-line"></span>
@@ -141,8 +145,8 @@
 
         <!-- Main Content -->
         <main class="main-content">
-            
-            <!-- Section Réseaux Sociaux - TOUJOURS OUVERTE -->
+
+            <!-- Section Réseaux Sociaux -->
             <section id="reseaux" class="content-section neon-card">
                 <div class="section-header">
                     <h2 class="section-title">
@@ -159,7 +163,7 @@
                             <span class="social-label">Instagram</span>
                             <div class="neon-border"></div>
                         </a>
-                        
+
                         <a href="https://facebook.com/qichallenge" target="_blank" class="social-link facebook" aria-label="Suivre QI Challenge sur Facebook">
                             <div class="social-icon">
                                 <img src="assets/social-icons/facebook.svg" alt="Facebook" loading="lazy">
@@ -167,7 +171,7 @@
                             <span class="social-label">Facebook</span>
                             <div class="neon-border"></div>
                         </a>
-                        
+
                         <a href="https://youtube.com/@qichallenge" target="_blank" class="social-link youtube" aria-label="S'abonner à QI Challenge sur YouTube">
                             <div class="social-icon">
                                 <img src="assets/social-icons/youtube.svg" alt="YouTube" loading="lazy">
@@ -175,15 +179,17 @@
                             <span class="social-label">YouTube</span>
                             <div class="neon-border"></div>
                         </a>
-                        
+
                         <a href="https://tiktok.com/@qichallenge" target="_blank" class="social-link tiktok" aria-label="Suivre QI Challenge sur TikTok">
                             <div class="social-icon">
-                                <img src="assets/social-icons/tiktok.svg" alt="TikTok" loading="lazy">
+                                <svg viewBox="0 0 2859 3333" fill="currentColor" aria-hidden="true" style="width: 30px; height: 30px;">
+                                    <path d="M2081 0c55 473 319 755 778 785v532c-266 26-499-61-770-225v995c0 1264-1378 1659-1932 753-356-583-138-1606 1004-1647v561c-87 14-180 36-265 65-254 86-398 247-358 531 77 544 1075 705 992-358V1h551z"></path>
+                                </svg>
                             </div>
                             <span class="social-label">TikTok</span>
                             <div class="neon-border"></div>
                         </a>
-                        
+
                         <a href="https://threads.net/@qichallenge" target="_blank" class="social-link threads" aria-label="Suivre QI Challenge sur Threads">
                             <div class="social-icon">
                                 <img src="assets/social-icons/threads.svg" alt="Threads" loading="lazy">
@@ -191,7 +197,7 @@
                             <span class="social-label">Threads</span>
                             <div class="neon-border"></div>
                         </a>
-                        
+
                         <a href="https://twitter.com/qichallenge" target="_blank" class="social-link twitter" aria-label="Suivre QI Challenge sur Twitter">
                             <div class="social-icon">
                                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -201,7 +207,7 @@
                             <span class="social-label">Twitter</span>
                             <div class="neon-border"></div>
                         </a>
-                        
+
                         <a href="https://www.twitch.tv/qichallenge" target="_blank" class="social-link twitch" aria-label="Suivre QI Challenge sur Twitch">
                             <div class="social-icon">
                                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -215,7 +221,7 @@
                 </div>
             </section>
 
-            <!-- Section Boutique - TOUJOURS OUVERTE -->
+            <!-- Section Boutique -->
             <section id="boutique" class="content-section neon-card">
                 <div class="section-header">
                     <h2 class="section-title">
@@ -231,7 +237,7 @@
                             <span class="button-glow"></span>
                         </a>
                     </div>
-                    
+
                     <div class="products-grid">
                         <article class="product-card neon-product" data-lazy="true">
                             <a href="https://qichallenge.redbubble.com/shop/t-shirts" target="_blank" class="product-link">
@@ -249,7 +255,7 @@
                                 <div class="neon-border"></div>
                             </a>
                         </article>
-                        
+
                         <article class="product-card neon-product" data-lazy="true">
                             <a href="https://qichallenge.redbubble.com/shop/stickers" target="_blank" class="product-link">
                                 <div class="product-image-container">
@@ -266,7 +272,7 @@
                                 <div class="neon-border"></div>
                             </a>
                         </article>
-                        
+
                         <article class="product-card neon-product" data-lazy="true">
                             <a href="https://qichallenge.redbubble.com/shop/mugs" target="_blank" class="product-link">
                                 <div class="product-image-container">
@@ -287,7 +293,7 @@
                 </div>
             </section>
 
-            <!-- Section Journal - TOUJOURS OUVERTE -->
+            <!-- Section Journal -->
             <section id="journal" class="content-section neon-card">
                 <div class="section-header">
                     <h2 class="section-title">
@@ -324,7 +330,7 @@
                 </div>
             </section>
 
-            <!-- Section Posts Viraux - TOUJOURS OUVERTE -->
+            <!-- Section Posts Viraux -->
             <section id="posts-viraux" class="content-section neon-card">
                 <div class="section-header">
                     <h2 class="section-title">
@@ -337,102 +343,41 @@
                         <div class="carousel-header">
                             <p class="carousel-description">Découvrez nos contenus les plus populaires qui font le buzz sur les réseaux sociaux</p>
                         </div>
-                        
+
                         <div class="posts-carousel" id="posts-carousel">
                             <div class="carousel-track" id="carousel-track">
-                                
-                                <!-- Post Instagram - Placeholder pour embed -->
+
+                                <!-- Post Instagram -->
                                 <div class="post-card viral-post instagram-embed">
-                                    <div class="post-header">
-                                        <div class="post-platform instagram">
-                                            <span class="platform-icon">📷</span>
-                                            <span class="platform-name">Instagram</span>
-                                        </div>
-                                        <div class="post-stats">
-                                            <span class="stat-item">
-                                                <span class="stat-icon">❤️</span>
-                                                <span class="stat-number">12.5K</span>
-                                            </span>
-                                            <span class="stat-item">
-                                                <span class="stat-icon">💬</span>
-                                                <span class="stat-number">847</span>
-                                            </span>
-                                        </div>
-                                    </div>
                                     <div class="embed-container">
-                                        <!-- Placeholder pour le code d'embed Instagram -->
-                                        <div class="embed-placeholder">
-                                            <div class="placeholder-content">
-                                                <span class="placeholder-icon">📷</span>
-                                                <p class="placeholder-text">Ce défi a rendu fou Instagram ! 95% des gens se trompent...</p>
-                                                <span class="engagement-badge viral">🔥 VIRAL</span>
-                                            </div>
-                                        </div>
+                                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C8_X2q1o3y_/" data-instgrm-version="14"></blockquote>
                                     </div>
                                     <div class="neon-border"></div>
                                 </div>
-                                
-                                <!-- Post Facebook - Embed intégré -->
+
+                                <!-- Post Facebook -->
                                 <div class="post-card viral-post facebook-embed">
-                                    <div class="post-header">
-                                        <div class="post-platform facebook">
-                                            <span class="platform-icon">👥</span>
-                                            <span class="platform-name">Facebook</span>
-                                        </div>
-                                        <div class="post-stats">
-                                            <span class="stat-item">
-                                                <span class="stat-icon">👍</span>
-                                                <span class="stat-number">8.7K</span>
-                                            </span>
-                                            <span class="stat-item">
-                                                <span class="stat-icon">💬</span>
-                                                <span class="stat-number">1.2K</span>
-                                            </span>
-                                        </div>
-                                    </div>
                                     <div class="embed-container">
-                                        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fqi.challenge%2Fposts%2Fpfbid0Ls7QjvKaVu4RTP2dt687xAVQvC9kwVkrsgnffWdwZjeNa81gPduKvKd6tCpZfqakl&show_text=true&width=500" width="100%" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                                        <div class="post-engagement">
-                                            <span class="engagement-badge hot">🔥 HOT</span>
-                                        </div>
+                                        <div class="fb-post" data-href="https://www.facebook.com/qi.challenge/posts/pfbid0Ls7QjvKaVu4RTP2dt687xAVQvC9kwVkrsgnffWdwZjeNa81gPduKvKd6tCpZfqakl" data-show-text="true" data-width="auto"></div>
                                     </div>
                                     <div class="neon-border"></div>
                                 </div>
-                                
-                                <!-- Post TikTok - Lien direct -->
+
+                                <!-- Post TikTok -->
                                 <div class="post-card viral-post tiktok-embed">
-                                    <div class="post-header">
-                                        <div class="post-platform tiktok">
-                                            <span class="platform-icon">🎵</span>
-                                            <span class="platform-name">TikTok</span>
-                                        </div>
-                                        <div class="post-stats">
-                                            <span class="stat-item">
-                                                <span class="stat-icon">❤️</span>
-                                                <span class="stat-number">45.2K</span>
-                                            </span>
-                                            <span class="stat-item">
-                                                <span class="stat-icon">🔄</span>
-                                                <span class="stat-number">3.1K</span>
-                                            </span>
-                                        </div>
-                                    </div>
                                     <div class="embed-container">
-                                        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@qi.challenge/video/7528692092256718102" data-video-id="7528692092256718102" data-embed-from="embed_page" style="max-width:605px; min-width:325px;"> 
-                                            <section> 
-                                                <a target="_blank" title="@qi.challenge" href="https://www.tiktok.com/@qi.challenge?refer=embed">@qi.challenge</a> 
-                                                <p>-là cejour-là </p> 
-                                                <a target="_blank" title="♬ son original - qi.challenge" href="https://www.tiktok.com/music/son-original-7528692098883767062?refer=embed">♬ son original - qi.challenge</a> 
-                                            </section> 
+                                        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@qi.challenge/video/7528692092256718102" data-video-id="7528692092256718102">
+                                            <section>
+                                                <a target="_blank" title="@qi.challenge" href="https://www.tiktok.com/@qi.challenge?refer=embed">@qi.challenge</a>
+                                                <p>Quel est le résultat ? 🤔</p>
+                                                <a target="_blank" title="♬ son original - qi.challenge" href="https://www.tiktok.com/music/son-original-7528692098883767062?refer=embed">♬ son original - qi.challenge</a>
+                                            </section>
                                         </blockquote>
-                                        <div class="post-engagement">
-                                            <span class="engagement-badge trending">📈 TRENDING</span>
-                                        </div>
                                     </div>
                                     <div class="neon-border"></div>
                                 </div>
                             </div>
-                            
+
                             <!-- Carousel Controls -->
                             <button class="carousel-btn prev-btn" id="prev-btn" aria-label="Post précédent">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -445,7 +390,7 @@
                                 </svg>
                             </button>
                         </div>
-                        
+
                         <div class="carousel-indicators" id="carousel-indicators">
                             <button class="indicator active" data-slide="0" aria-label="Aller au post Instagram"></button>
                             <button class="indicator" data-slide="1" aria-label="Aller au post Facebook"></button>
@@ -455,7 +400,7 @@
                 </div>
             </section>
 
-            <!-- Section Hall of Fame - TOUJOURS OUVERTE -->
+            <!-- Section Hall of Fame -->
             <section id="hall-of-fame" class="content-section neon-card">
                 <div class="section-header">
                     <h2 class="section-title">
@@ -468,7 +413,7 @@
                         <div class="hall-header">
                             <p class="hall-description">Le mur des légendes QI Challenge ! Découvrez les membres de notre communauté qui se démarquent par leur intelligence, créativité et humour.</p>
                         </div>
-                        
+
                         <div class="hall-categories">
                             <div class="category-tabs">
                                 <button class="category-tab active" data-category="all">Tous</button>
@@ -478,7 +423,7 @@
                                 <button class="category-tab" data-category="ambassadeurs">📣 Ambassadeurs</button>
                             </div>
                         </div>
-                        
+
                         <div class="hall-table-container">
                             <table class="hall-table">
                                 <thead>
@@ -510,7 +455,7 @@
                                         <td class="comment">Réponse logique et rapide sur l'énigme "Quelle tasse se remplit en premier?"</td>
                                         <td class="date">18 juillet</td>
                                     </tr>
-                                    
+
                                     <tr class="hall-entry" data-category="decodeurs">
                                         <td class="rank">
                                             <div class="rank-badge silver">
@@ -529,7 +474,7 @@
                                         <td class="comment">A répondu 18 à l'énigme « 5² - 4 × 2 + 1 »</td>
                                         <td class="date">18 juillet</td>
                                     </tr>
-                                    
+
                                     <tr class="hall-entry" data-category="decodeurs">
                                         <td class="rank">
                                             <div class="rank-badge bronze">
@@ -548,7 +493,7 @@
                                         <td class="comment">Éric a vu clair dans le jeu... littéralement. "Une vitre" : réponse limpide pour un esprit affûté 🧠🪟😂 « Vous me voyez quand vous regardez à travers moi. Qui suis-je ? »</td>
                                         <td class="date">10 juillet</td>
                                     </tr>
-                                    
+
                                     <tr class="hall-entry" data-category="ambassadeurs">
                                         <td class="rank">
                                             <div class="rank-badge regular">
@@ -567,7 +512,7 @@
                                         <td class="comment">Partage régulier et tags d'amis sur tous nos défis</td>
                                         <td class="date">19 juillet</td>
                                     </tr>
-                                    
+
                                     <tr class="hall-entry" data-category="creatifs">
                                         <td class="rank">
                                             <div class="rank-badge regular">
@@ -589,7 +534,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        
+
                         <div class="hall-footer">
                             <p class="hall-note">🌟 Vous voulez apparaître dans le Hall of Fame ? Participez activement à nos défis et montrez votre génie !</p>
                         </div>
@@ -597,7 +542,7 @@
                 </div>
             </section>
 
-            <!-- Section Contact - TOUJOURS OUVERTE -->
+            <!-- Section Contact -->
             <section id="contact" class="content-section neon-card">
                 <div class="section-header">
                     <h2 class="section-title">
@@ -610,10 +555,10 @@
                         <div class="contact-info">
                             <h3 class="contact-title">Connectons nos cerveaux !</h3>
                             <p class="contact-description">
-                                Une question ? Une collaboration ? Une idée de défi ? 
+                                Une question ? Une collaboration ? Une idée de défi ?
                                 N'hésitez pas à nous contacter pour rejoindre l'aventure QI Challenge.
                             </p>
-                            
+
                             <div class="contact-details">
                                 <div class="contact-item">
                                     <span class="contact-icon">📧</span>
@@ -622,7 +567,7 @@
                                         <span class="contact-email">contact@qichallenge.com</span>
                                     </div>
                                 </div>
-                                
+
                                 <div class="contact-item">
                                     <span class="contact-icon">⚡</span>
                                     <div class="contact-text">
@@ -630,7 +575,7 @@
                                         <span class="contact-value">Sous 24h</span>
                                     </div>
                                 </div>
-                                
+
                                 <div class="contact-item">
                                     <span class="contact-icon">🌍</span>
                                     <div class="contact-text">
@@ -640,28 +585,28 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="contact-actions">
                             <a href="mailto:contact@qichallenge.com" class="contact-button primary">
                                 <span class="button-text">Contact Général</span>
                                 <span class="button-glow"></span>
                             </a>
-                            
+
                             <a href="mailto:partenariats@qichallenge.com" class="contact-button secondary">
                                 <span class="button-text">Partenariats</span>
                                 <span class="button-glow"></span>
                             </a>
-                            
+
                             <div class="contact-social">
                                 <p class="social-text">Ou rejoignez-nous sur :</p>
                                 <div class="social-quick-links">
-                                    <a href="https://instagram.com/qichallenge" target="_blank" class="social-quick-link" aria-label="Instagram">
+                                    <a href="https://instagram.com/qichallenge" target="_blank"  aria-label="Instagram">
                                         <span class="social-icon">📷</span>
                                     </a>
-                                    <a href="https://facebook.com/qichallenge" target="_blank" class="social-quick-link" aria-label="Facebook">
+                                    <a href="https://facebook.com/qichallenge" target="_blank"  aria-label="Facebook">
                                         <span class="social-icon">👥</span>
                                     </a>
-                                    <a href="https://tiktok.com/@qichallenge" target="_blank" class="social-quick-link" aria-label="TikTok">
+                                    <a href="https://tiktok.com/@qichallenge" target="_blank" aria-label="TikTok">
                                         <span class="social-icon">🎵</span>
                                     </a>
                                 </div>
@@ -689,10 +634,10 @@
 
     <!-- Scripts -->
     <script src="js/main.js"></script>
+    <script async src="//www.instagram.com/embed.js"></script>
     <script async src="https://www.tiktok.com/embed.js"></script>
-    
+
     <!-- Screen Reader Announcements -->
     <div id="sr-announcements" class="sr-only" aria-live="polite" aria-atomic="true"></div>
 </body>
 </html>
-
