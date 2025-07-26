@@ -317,9 +317,9 @@ function createParticles() {
 // ===== FONCTIONS UTILITAIRES =====
 function participateChallenge() {
     const socialLinks = [
-        "https://instagram.com/qichallenge",
-        "https://facebook.com/qichallenge",
-        "https://tiktok.com/@qichallenge"
+        "https://instagram.com/qi.challenge",
+        "https://facebook.com/qi.challenge",
+        "https://tiktok.com/@qi.challenge"
     ];
     const randomLink = socialLinks[Math.floor(Math.random() * socialLinks.length)];
     window.open(randomLink, "_blank");
