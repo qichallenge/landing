@@ -391,6 +391,7 @@ body {
 }
 
 .hero-title {
+  margin-top: var(--spacing-2xl);
   margin-bottom: var(--spacing-xl);
   animation: fadeInUp 1s ease-out 0.5s both;
 }
