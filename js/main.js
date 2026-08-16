@@ -1,3 +1,8 @@
+const whatsappStylesheet = document.createElement('link');
+whatsappStylesheet.rel = 'stylesheet';
+whatsappStylesheet.href = 'css/whatsapp.css';
+document.head.appendChild(whatsappStylesheet);
+
 const navToggle = document.querySelector('.nav-toggle');
 const mainNav = document.querySelector('.main-nav');
 
